@@ -1,7 +1,17 @@
 /**
- * @path net.bubble.common.utils.BeanContextUtil.java
- * @date 2015年1月28日
- * @author shiwen_xiao
+ * Copyright [2015-2017] [https://github.com/bubble-light/]
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 package net.bubble.common.utils;
 
@@ -32,8 +42,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 /**
  * Spring容器内Bean相关操作类
- * 
- * 2015年1月28日
+ * @author shiwen_xiao<xiaosw@msn.cn>
+ * @since 2015年1月28日
  */
 public class BeanContextUtil implements ApplicationContextAware{
 
@@ -73,7 +83,7 @@ public class BeanContextUtil implements ApplicationContextAware{
 	 * @param beanClass 对象class
 	 * @return Object 容器内对象实例
 	 */
-	public Object getBean(Class beanClass){
+	public Object getBean(Class<?> beanClass){
 		return getBean(beanClass,null);
 	}
 	
@@ -83,7 +93,7 @@ public class BeanContextUtil implements ApplicationContextAware{
 	 * @param args 对象参数
 	 * @return Object 容器内对象实例
 	 */
-	public Object getBean(Class beanClass,Object... args){
+	public Object getBean(Class<?> beanClass,Object... args){
 		logger.info("BeanName is:{}",beanClass.getName());
 		return this.applicationContext.getBean(beanClass, args);
 	}
