@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd" >
-<web-app>
-	<display-name>bubble</display-name>
-	<description>a j2ee program</description>
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>index.html</welcome-file>
-	</welcome-file-list>
-</web-app>
+<javaee:web-app version="2.5"
+	xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_2_5.xsd ">
+	<javaee:display-name>bubble</javaee:display-name>
+	<javaee:description>a j2ee program</javaee:description>
+	<javaee:welcome-file-list>
+		<javaee:welcome-file>index.html</javaee:welcome-file>
+		<javaee:welcome-file>index.jsp</javaee:welcome-file>
+		<javaee:welcome-file>index.html</javaee:welcome-file>
+	</javaee:welcome-file-list>
+</javaee:web-app>
