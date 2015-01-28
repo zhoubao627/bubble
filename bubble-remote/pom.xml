@@ -3,7 +3,7 @@
   <parent>
     <groupId>net.bubble</groupId>
     <artifactId>bubble</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
   </parent>
   <artifactId>bubble-remote</artifactId>
   <name>bubble-remote</name>
@@ -12,7 +12,7 @@
   	<dependency>
   		<groupId>net.bubble</groupId>
   		<artifactId>bubble-common</artifactId>
-  		<version>1.0.0-SNAPSHOT</version>
+  		<version>1.0.0</version>
   	</dependency>
   </dependencies>
   <url>https://github.com/bubble-light/bubble/tree/master/bubble-remote</url>

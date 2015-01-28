@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.bubble</groupId>
 	<artifactId>bubble</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	<name>bubble</name>
-	<description>a j2ee program name bubble</description>
+	<description>A j2ee program name bubble</description>
 
 	<modules>
 		<module>bubble-common</module>
@@ -14,15 +14,31 @@
 		<module>bubble-persistence</module>
 		<module>bubble-remote</module>
 	</modules>
-
 	<url>https://github.com/bubble-light/bubble</url>
+	
 	<developers>
 		<developer>
 			<name>shiwen_xiao</name>
 			<email>xiaosw@msn.cn</email>
 		</developer>
 	</developers>
-
+	
+	<properties>
+		<spring.version>4.1.4.RELEASE</spring.version>
+		<junit.version>4.12</junit.version>
+		<slf4j.version>1.7.10</slf4j.version>
+		<logback.version>1.1.2</logback.version>
+		<ojdbc14.version>10.2.0.4.0</ojdbc14.version>
+		<classes12.version>10.2.0.2.0</classes12.version>
+		<project.encoding>UTF-8</project.encoding>
+		<hibernate.version>4.3.8.Final</hibernate.version>
+		<servlet-api.version>2.5</servlet-api.version>
+		<jsp-api.version>2.0</jsp-api.version>
+		<mysql.version>5.1.34</mysql.version>
+		<db2jcc.version>1.4.2</db2jcc.version>
+		<mybatis.version>3.2.8</mybatis.version>
+		<java.version>1.6</java.version>
+	</properties>
 
 	<build>
 		<plugins>
@@ -32,6 +48,8 @@
 				<version>3.1</version>
 				<configuration>
 					<encoding>${project.encoding}</encoding>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -50,24 +68,16 @@
 					</descriptors>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<configuration>
+					<outputDirectory>./target</outputDirectory>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
-
-	<properties>
-		<spring.version>4.1.4.RELEASE</spring.version>
-		<junit.version>4.12</junit.version>
-		<slf4j.version>1.7.10</slf4j.version>
-		<logback.version>1.1.2</logback.version>
-		<ojdbc14.version>10.2.0.4.0</ojdbc14.version>
-		<classes12.version>10.2.0.2.0</classes12.version>
-		<project.encoding>UTF-8</project.encoding>
-		<hibernate.version>4.3.8.Final</hibernate.version>
-		<servlet-api.version>2.5</servlet-api.version>
-		<jsp-api.version>2.0</jsp-api.version>
-		<mysql.version>5.1.34</mysql.version>
-		<db2jcc.version>1.4.2</db2jcc.version>
-		<mybatis.version>3.2.8</mybatis.version>
-	</properties>
 	<dependencyManagement>
 		<dependencies>
 			<!-- test jar begin -->
