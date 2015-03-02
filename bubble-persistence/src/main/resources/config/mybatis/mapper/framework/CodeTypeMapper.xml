@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.bubble.persistence.framework.repositories.CodeConfigRepository">
+	<!-- 
+	<resultMap id="resultMap_Customer" type="net.bubble.persistence.app.entities.Customer">
+		<result property="id" column="ID" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="firstName" column="FIRST_NAME" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="lastName" column="LAST_NAME" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="emailAddress" column="EMAIL_ADDRESS" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="createdDate" column="CREATED_DATE" javaType="java.lang.String" jdbcType="CHAR"/>
+		<result property="lastModifiedDate" column="LAST_MODIFIED_DATE" javaType="java.lang.String" jdbcType="CHAR"/>
+		<result property="createdBy" column="CREATED_BY" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result property="lastModifiedBy" column="LAST_MODIFIED_BY" javaType="java.lang.String" jdbcType="VARCHAR"/>
+	</resultMap>
+	
+	<insert id="save" parameterType="net.bubble.persistence.app.entities.Customer"> 
+		INSERT INTO CUSTOMER
+		  (ID,
+		   FIRST_NAME,
+		   LAST_NAME,
+		   EMAIL_ADDRESS,
+		   CREATED_BY,
+		   CREATED_DATE,
+		   LAST_MODIFIED_BY,
+		   LAST_MODIFIED_DATE)
+		VALUES
+		  (
+		   #{id,jdbcType=VARCHAR},
+		   #{firstName,jdbcType=VARCHAR},
+		   #{lastName,jdbcType=VARCHAR},
+		   #{emailAddress,jdbcType=VARCHAR},
+		   #{createdBy,jdbcType=VARCHAR},
+		   #{createdDate,jdbcType=VARCHAR},
+		   #{lastModifiedBy,jdbcType=CHAR},
+		   #{lastModifiedDate,jdbcType=CHAR}
+		  )
+	</insert>
+	
+	<select id="getCustomerByPage" parameterType="net.bubble.persistence.framework.page.Page" resultMap="resultMap_Customer">
+			SELECT ID,
+				FIRST_NAME,
+				LAST_NAME,
+				EMAIL_ADDRESS,
+				CREATED_BY,
+				CREATED_DATE,
+				LAST_MODIFIED_BY,
+				LAST_MODIFIED_DATE 
+   		FROM CUSTOMER
+			WHERE 
+			ID = #{params.id,jdbcType=VARCHAR}
+	</select> -->
+	
+</mapper>

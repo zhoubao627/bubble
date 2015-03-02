@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true">
-	<property resource="config/log/logback.properties"></property>
+	<property resource="config/prop/logback.properties"></property>
 	<appender name="FRAMEWORK_FILE"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>${logfile.home}/logs/${logfile.name}_framework.log</file>
@@ -55,7 +55,12 @@
 		<appender-ref ref="BUBBLE_FILE" />
 	</logger>
 
-	<logger name="java.sql" additivity="false">
+	<logger name="java.sql.Connection" additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="BUBBLE_FILE" />
+	</logger>
+	
+	<logger name="java.sql.Statement" additivity="false">
 		<level value="DEBUG" />
 		<appender-ref ref="BUBBLE_FILE" />
 	</logger>

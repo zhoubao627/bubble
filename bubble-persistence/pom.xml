@@ -1,19 +1,62 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>net.bubble</groupId>
-    <artifactId>bubble</artifactId>
-    <version>1.0.0</version>
-  </parent>
-  <artifactId>bubble-persistence</artifactId>
-  <name>bubble-persistence</name>
-  <description>persistence with bubble</description>
-  <dependencies>
-  	<dependency>
-  		<groupId>net.bubble</groupId>
-  		<artifactId>bubble-common</artifactId>
-  		<version>1.0.0</version>
-  	</dependency>
-  </dependencies>
-  <url>https://github.com/bubble-light/bubble/tree/master/bubble-persistence</url>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>net.bubble</groupId>
+		<artifactId>bubble</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>bubble-persistence</artifactId>
+	<name>bubble-persistence</name>
+	<description>persistence with bubble</description>
+	<dependencies>
+		<dependency>
+			<groupId>net.bubble</groupId>
+			<artifactId>bubble-common</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-commons</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+		</dependency>
+
+		<!-- <dependency> <groupId>asm</groupId> <artifactId>asm</artifactId> </dependency> -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+	</dependencies>
+	<url>https://github.com/bubble-light/bubble/tree/master/bubble-persistence</url>
 </project>

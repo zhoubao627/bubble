@@ -10,14 +10,14 @@
 	<fileSets>
 		<fileSet>
 			<includes>
-				<include>LICENSE.txt</include>
+				<include>LICENSE</include>
 				<include>README.md</include>
 			</includes>
 			<outputDirectory>/copyright</outputDirectory>
 		</fileSet>
 		<fileSet>
 			<includes>
-				<include>./target/*.war</include>
+				<include>./deploy/*.war</include>
 			</includes>
 		</fileSet>
 		<!-- TODO add other Files -->
